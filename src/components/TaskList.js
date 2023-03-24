@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TaskItem from "./TaskItem";
 import { useGetTasksQuery } from "../features/task/tasksApi";
 
@@ -8,11 +8,6 @@ import { useSelector } from "react-redux";
 export default function TaskList() {
   const { data: tasks, isLoading, isError, error } = useGetTasksQuery();
   const { checkedArr, searchText } = useSelector((state) => state.filters);
-
-  // console.log(tasks);
-  useEffect(() => {
-    console.log(checkedArr);
-  }, [checkedArr]);
 
   let content = null;
 
