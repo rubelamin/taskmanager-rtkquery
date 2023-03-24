@@ -13,7 +13,7 @@ export const store = configureStore({
     projects: projectSliceReducer,
     filters: filterSliceReducer,
   },
-  // devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares().concat(apiSlice.middleware),
 });
