@@ -16,10 +16,8 @@ const filterSlice = createSlice({
     projectArr: (state, action) => {
       const index = state.checkedArr.indexOf(action.payload);
       if (index > -1 && state.checkedArr.length > 0) {
-        console.log("I am splice");
         state.checkedArr.splice(index, 1);
       } else {
-        console.log("I am pushed");
         state.checkedArr.push(action.payload);
       }
       //   state.checkedArr.push(action.payload);
